@@ -1,8 +1,14 @@
-# Gstreamer 
-To install gstreamer follow the instructions from https://gstreamer.freedesktop.org/ 
+# Install Gstreamer on a docker container
 
-My favorite way is to create a docker container and install gstreamer on it.
-Once the container is running we can test if Gstreamer is installed by running gst-launch-1.0 --gst-version
+Run docker build -t 'gstreamer' .
+Build a container from the image created above:
+docker run -dt --name gst clientportal /bin/bash
+
+Then 
+docker exec -ti gst /bin/bash 
+
+Once the container is running we can test if Gstreamer is installed by running 
+gst-launch-1.0 --gst-version
 
 If it is installed then we can go ahead and create a pipeline using gst-launch
 gst-launch-1.0 uridecodebin uri=http://podcast.dr.dk/p1/sprogminuttet/sprogminut65.mp3 ! fakesink dump=true num-buffers=10
