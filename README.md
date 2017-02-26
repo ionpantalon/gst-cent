@@ -14,7 +14,7 @@ Once the container is running we can test if Gstreamer is installed by running
 
 gst-launch-1.0 --gst-version
 
-If it is installed then we can go ahead and create a pipeline using gst-launch
+If it is installed succesfully we can go ahead and create a pipeline using gst-launch
 
 gst-launch-1.0 uridecodebin uri=http://podcast.dr.dk/p1/sprogminuttet/sprogminut65.mp3 ! fakesink dump=true num-buffers=10
 
