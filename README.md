@@ -1,2 +1,13 @@
-# gst-cent
-gst-cent-discoverer
+# Gstreamer 
+To install gstreamer follow the instructions from https://gstreamer.freedesktop.org/ 
+My favorite way is to create a docker container and install gstreamer on it.
+Once the container is running we can test if Gstreamer is installed by running gst-launch-1.0 --gst-version
+
+If it is installed then we can go ahead and create a pipeline using gst-launch
+gst-launch-1.0 uridecodebin uri=http://podcast.dr.dk/p1/sprogminuttet/sprogminut65.mp3 ! fakesink dump=true num-buffers=10
+
+To get useful information about a stream we can use the gst-discoverer like show below
+gst-discoverer-1.0 http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-syndication-dash/proto/http/vpid/b06w4rsk
+
+For debugging add in front of the pipeline like so
+GST_DEBUG=5 gst-launch-1.0 uridecodebin uri=http://podcast.dr.dk/p1/sprogminuttet/sprogminut65.mp3 ! fakesink dump=true num-buffers=10
