@@ -1,5 +1,6 @@
 # Gstreamer 
 To install gstreamer follow the instructions from https://gstreamer.freedesktop.org/ 
+
 My favorite way is to create a docker container and install gstreamer on it.
 Once the container is running we can test if Gstreamer is installed by running gst-launch-1.0 --gst-version
 
