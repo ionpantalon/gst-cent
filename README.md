@@ -6,7 +6,7 @@ $ docker build -t 'gstreamer' .
 ```
 Now that we have the image let's create a container and name it gst
 ```sh
-$ docker run -dt --name gst clientportal /bin/bash
+$ docker run -dt --name gst gstreamer /bin/bash
 ```
 To access the gst container run
 ```sh
