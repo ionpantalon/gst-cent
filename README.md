@@ -1,4 +1,4 @@
-## Install Gstreamer1.4.5 on a docker container
+## Install Gstreamer-1.4.5 on a docker container
 
 Let's start by building a new image using the Dockerfile 
 ```sh
